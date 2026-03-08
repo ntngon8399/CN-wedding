@@ -11,7 +11,6 @@ interface Guest {
 
 const FindTable: React.FC = () => {
   const [guests, setGuests] = React.useState<Guest[]>([]);
-  console.log('guests', guests);
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [hasSearched, setHasSearched] = useState<boolean>(false);
@@ -23,9 +22,11 @@ const FindTable: React.FC = () => {
   useEffect(() => {
     db.collection('guest_list').onSnapshot(
       (snapshot: any) => {
-        snapshot.docs.map((doc: any): void => {
-          setGuests(prev => [...prev, doc.data()]);
-        });
+        const guestsData = snapshot.docs.map((doc: any) => ({
+          id: doc.id,
+          ...doc.data()
+        }));
+        setGuests(guestsData);
       },
       (error: any) => {
         console.log('error', error);
@@ -42,16 +43,31 @@ const FindTable: React.FC = () => {
     console.log('Searching for:', searchQuery);
     setHasSearched(true);
     
-    // Search for user in guests array
-    const user = guests.find(guest => 
+    // Search for all matching users in guests array
+    const matches = guests.filter(guest => 
       guest.name.toLowerCase().includes(searchQuery.toLowerCase().trim())
     );
     
-    if (user) {
-      setFoundUser(user);
+    if (matches.length === 0) {
+      setFoundUser(null);
+      setMatchedUsers([]);
+      setShowDropdown(false);
+    } else if (matches.length === 1) {
+      setFoundUser(matches[0]);
+      setMatchedUsers([]);
+      setShowDropdown(false);
     } else {
+      // Multiple matches found - show dropdown
+      setMatchedUsers(matches);
+      setShowDropdown(true);
       setFoundUser(null);
     }
+  };
+
+  const handleUserSelect = (user: Guest) => {
+    setFoundUser(user);
+    setShowDropdown(false);
+    setMatchedUsers([]);
   };
 
   const handleNavigation = (path: string) => {
@@ -134,8 +150,13 @@ const FindTable: React.FC = () => {
               onChange={handleSearch}
             />
             <button
-              className="bg-primary hover:bg-primary/90 text-white dark:text-white px-6 py-2 rounded-lg font-medium transition-transform active:scale-95 shadow-md"
+              className={`px-6 py-2 rounded-lg font-medium transition-transform active:scale-95 shadow-md ${
+                searchQuery.trim()
+                  ? 'bg-primary hover:bg-primary/90 text-white dark:text-white cursor-pointer'
+                  : 'bg-primary text-white dark:text-white cursor-not-allowed opacity-50'
+              }`}
               onClick={handleSearchSubmit}
+              disabled={!searchQuery.trim()}
             >
               Tìm
             </button>
@@ -143,6 +164,40 @@ const FindTable: React.FC = () => {
         </div>
 
         <p className="text-center text-xs text-primary/60 dark:text-primary/40 italic mb-8">*Vui lòng nhập đầy đủ họ và tên</p>
+
+        {/* Dropdown for multiple matches */}
+        {showDropdown && matchedUsers.length > 0 && (
+          <div className="w-full max-w-md mx-auto mb-8">
+            <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/20 overflow-hidden">
+              <div className="p-4 border-b border-primary/10">
+                <p className="text-sm text-primary/60 dark:text-primary/40 text-center">
+                  Tìm thấy {matchedUsers.length} người trùng tên. Vui lòng chọn:
+                </p>
+              </div>
+              <div className="max-h-60 overflow-y-auto">
+                {matchedUsers.map((user, index) => (
+                  <button
+                    key={user.id || index}
+                    onClick={() => handleUserSelect(user)}
+                    className="w-full px-4 py-3 text-left hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors border-b border-primary/5 last:border-b-0 flex items-center justify-between group"
+                  >
+                    <div>
+                      <p className="font-medium text-primary dark:text-primary group-hover:text-primary/80">
+                        {user.name}
+                      </p>
+                      <p className="text-sm text-primary/60 dark:text-primary/40">
+                        Bàn số: {user.table}
+                      </p>
+                    </div>
+                    <span className="material-icons text-primary/40 group-hover:text-primary/60">
+                      arrow_forward_ios
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Main Content Grid */}
         {hasSearched && foundUser && (
@@ -159,10 +214,10 @@ const FindTable: React.FC = () => {
                       {[...Array(12)].map((_, i) => (
                         <div
                           key={i}
-                          className={`border border-primary/30 rounded-full flex items-center justify-center text-xs hover:bg-primary hover:text-white hover:scale-110 transition-all cursor-pointer relative ${
+                          className={`border border-primary/30 rounded-full flex items-center justify-center text-xs transition-all relative ${
                             i + 1 === foundUser.table 
-                              ? 'bg-primary text-white' 
-                              : 'text-primary/50'
+                              ? 'bg-primary text-white cursor-pointer hover:scale-110' 
+                              : 'text-primary/50 cursor-not-allowed'
                           }`}
                         >
                           {String(i + 1).padStart(2, '0')}
@@ -220,7 +275,7 @@ const FindTable: React.FC = () => {
         )}
 
         {/* Show message when user not found */}
-        {hasSearched && !foundUser && (
+        {hasSearched && !foundUser && !showDropdown && (
           <div className="w-full max-w-md mx-auto text-center">
             <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/20 p-8">
               <span className="material-icons text-4xl text-primary/40 mb-4">search_off</span>
