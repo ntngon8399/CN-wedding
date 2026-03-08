@@ -1,0 +1,92 @@
+// Mixins for common patterns
+
+@mixin button-styles($bg-color: $primary-color, $text-color: $text-white) {
+  background: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 15px 35px;
+  font-size: $font-md;
+  font-weight: 600;
+  border-radius: $radius-full;
+  cursor: pointer;
+  transition: $transition-fast;
+  box-shadow: $shadow-md;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+@mixin card-styles {
+  background: $paper-light;
+  border-radius: $radius-lg;
+  padding: $spacing-huge;
+  box-shadow: $shadow-sm;
+  transition: $transition-fast;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin section-spacing {
+  margin-top: $spacing-massive;
+  margin-bottom: $spacing-massive;
+}
+
+@mixin responsive-grid($min-width: 300px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $spacing-xl;
+}
+
+@mixin mobile-only {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin fade-in-up($delay: 0s) {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp $transition-normal ease-out forwards;
+  animation-delay: $delay;
+}
+
+@mixin fade-in-down($delay: 0s) {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInDown $transition-normal ease-out forwards;
+  animation-delay: $delay;
+}
+
+@mixin center-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-gradient($colors...) {
+  background: linear-gradient($colors...);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

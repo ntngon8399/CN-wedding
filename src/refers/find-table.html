@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Find Your Table - Khanh Nhi &amp; Duc Cuong Wedding</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Great+Vibes&amp;family=Cinzel:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#af897c", // The main text/accent color
+                        secondary: "#d9c5bd", // A lighter shade for subtle elements
+                        "background-light": "#f2ede9",
+                        "background-dark": "#1a1614", // Dark mode equivalent
+                        "card-light": "#ffffff",
+                        "card-dark": "#2c2522",
+                    },
+                    fontFamily: {
+                        display: ["Great Vibes", "cursive"], // For script headings
+                        serif: ["Montserrat", "serif"], // For formal titles
+                        sans: ["Montserrat", "sans-serif"], // For body text
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .ornament-corner {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            pointer-events: none;
+            opacity: 0.6;
+            z-index: 0;
+        }
+
+        .rotated-180 {
+            transform: rotate(180deg);
+        }
+
+        .rotated-90 {
+            transform: rotate(90deg);
+        }
+
+        .rotated-270 {
+            transform: rotate(270deg);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #af897c;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-primary transition-colors duration-300 min-h-screen relative overflow-x-hidden selection:bg-primary selection:text-white pb-24">
+    <div
+        class="fixed top-0 left-0 w-32 h-32 md:w-48 md:h-48 z-0 pointer-events-none opacity-40 dark:opacity-20 text-primary">
+        <svg class="w-full h-full transform -scale-x-100 rotate-180" fill="currentColor" viewBox="0 0 100 100">
+            <path d="M10,10 Q50,10 50,50 T90,90 M10,30 Q30,30 30,50 M10,50 Q20,50 20,60" fill="none"
+                stroke="currentColor" stroke-width="2"></path>
+            <path d="M90,10 C70,10 70,30 50,30 C30,30 30,50 10,50" fill="none" stroke="currentColor" stroke-width="1">
+            </path>
+            <circle cx="20" cy="20" r="2"></circle>
+            <circle cx="80" cy="15" r="3"></circle>
+            <path d="M0,0 L40,0 L0,40 Z" fill="currentColor" opacity="0.1"></path>
+        </svg>
+    </div>
+    <div
+        class="fixed top-0 right-0 w-32 h-32 md:w-48 md:h-48 z-0 pointer-events-none opacity-40 dark:opacity-20 text-primary">
+        <svg class="w-full h-full transform rotate-180" fill="currentColor" viewBox="0 0 100 100">
+            <path d="M10,10 Q50,10 50,50 T90,90 M10,30 Q30,30 30,50 M10,50 Q20,50 20,60" fill="none"
+                stroke="currentColor" stroke-width="2"></path>
+            <path d="M90,10 C70,10 70,30 50,30 C30,30 30,50 10,50" fill="none" stroke="currentColor" stroke-width="1">
+            </path>
+            <circle cx="20" cy="20" r="2"></circle>
+            <circle cx="80" cy="15" r="3"></circle>
+            <path d="M0,0 L40,0 L0,40 Z" fill="currentColor" opacity="0.1"></path>
+        </svg>
+    </div>
+    <div
+        class="fixed bottom-0 left-0 w-32 h-32 md:w-48 md:h-48 z-0 pointer-events-none opacity-40 dark:opacity-20 text-primary">
+        <svg class="w-full h-full transform -scale-x-100" fill="currentColor" viewBox="0 0 100 100">
+            <path d="M10,10 Q50,10 50,50 T90,90 M10,30 Q30,30 30,50 M10,50 Q20,50 20,60" fill="none"
+                stroke="currentColor" stroke-width="2"></path>
+            <path d="M90,10 C70,10 70,30 50,30 C30,30 30,50 10,50" fill="none" stroke="currentColor" stroke-width="1">
+            </path>
+            <circle cx="20" cy="20" r="2"></circle>
+            <circle cx="80" cy="15" r="3"></circle>
+            <path d="M0,0 L40,0 L0,40 Z" fill="currentColor" opacity="0.1"></path>
+        </svg>
+    </div>
+    <div
+        class="fixed bottom-0 right-0 w-32 h-32 md:w-48 md:h-48 z-0 pointer-events-none opacity-40 dark:opacity-20 text-primary">
+        <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+            <path d="M10,10 Q50,10 50,50 T90,90 M10,30 Q30,30 30,50 M10,50 Q20,50 20,60" fill="none"
+                stroke="currentColor" stroke-width="2"></path>
+            <path d="M90,10 C70,10 70,30 50,30 C30,30 30,50 10,50" fill="none" stroke="currentColor" stroke-width="1">
+            </path>
+            <circle cx="20" cy="20" r="2"></circle>
+            <circle cx="80" cy="15" r="3"></circle>
+            <path d="M0,0 L40,0 L0,40 Z" fill="currentColor" opacity="0.1"></path>
+        </svg>
+    </div>
+
+    <main class="relative z-10 container mx-auto px-4 py-8 md:py-12 max-w-5xl flex flex-col items-center min-h-[80vh]">
+        <div class="text-center mb-12 space-y-4">
+            <h1 class="font-display text-5xl md:text-7xl text-primary dark:text-primary mb-2">Find Your Table</h1>
+            <div class="h-px w-24 bg-primary mx-auto opacity-50"></div>
+            <p class="font-sans text-primary/80 dark:text-primary/70 text-sm md:text-base tracking-wide uppercase">
+                Khanh Nhi &amp; Duc Cuong Wedding
+            </p>
+        </div>
+        <div class="w-full max-w-md mx-auto mb-12 relative group">
+            <div
+                class="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+            </div>
+            <div
+                class="relative bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-primary/20 p-2 flex items-center">
+                <span class="material-icons text-primary/50 ml-3">search</span>
+                <input
+                    class="w-full bg-transparent border-none focus:ring-0 text-primary dark:text-primary placeholder-primary/40 font-sans text-lg px-4 py-2"
+                    placeholder="Nhập tên của bạn..." type="text" />
+                <button
+                    class="bg-primary hover:bg-primary/90 text-white dark:text-white px-6 py-2 rounded-lg font-medium transition-transform active:scale-95 shadow-md">
+                    Tìm
+                </button>
+            </div>
+            <p class="text-center text-xs mt-3 text-primary/60 dark:text-primary/50 italic">
+                *Vui lòng nhập đầy đủ họ và tên
+            </p>
+        </div>
+        <div class="w-full grid md:grid-cols-2 gap-8 items-start animate-fade-in-up">
+            <div
+                class="relative order-2 md:order-1 bg-card-light dark:bg-card-dark rounded-2xl shadow-xl border border-primary/10 overflow-hidden p-6 md:p-8">
+                <h3 class="font-serif text-center text-xl text-primary mb-6">Sơ đồ tiệc cưới</h3>
+                <div
+                    class="relative aspect-square w-full bg-background-light dark:bg-background-dark/50 rounded-lg border border-primary/10 p-4">
+                    <div
+                        class="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/3 h-12 bg-primary/20 dark:bg-primary/30 rounded-t-lg border-t border-l border-r border-primary flex items-center justify-center">
+                        <span class="text-xs font-bold uppercase tracking-widest text-primary">Stage</span>
+                    </div>
+                    <div class="grid grid-cols-4 grid-rows-4 gap-4 mt-16 h-full pb-8">
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            01</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            02</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            03</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            04</div>
+                        <div
+                            class="relative rounded-full bg-primary text-white dark:text-white shadow-lg shadow-primary/40 flex items-center justify-center font-bold scale-110 z-10 animate-pulse">
+                            05
+                            <div
+                                class="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                                You are here
+                            </div>
+                        </div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            06</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            07</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            08</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            09</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            10</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            11</div>
+                        <div
+                            class="rounded-full border border-primary/30 flex items-center justify-center text-xs text-primary/50">
+                            12</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex flex-col justify-center h-full">
+                <div
+                    class="bg-card-light dark:bg-card-dark rounded-2xl shadow-xl border border-primary/20 p-8 md:p-12 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 opacity-10">
+                        <svg class="w-full h-full text-primary" fill="currentColor" viewBox="0 0 100 100">
+                            <path d="M50 0 C50 0 70 30 100 30 C70 30 70 60 50 100 C30 60 30 30 0 30 C30 30 50 0 50 0 Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="font-display text-3xl text-primary/60 mb-2">Welcome</p>
+                        <h2 class="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">Nguyễn Văn A</h2>
+                        <div class="my-6">
+                            <div
+                                class="inline-flex flex-col items-center justify-center w-32 h-32 rounded-full border-4 border-double border-primary/30 bg-background-light dark:bg-background-dark">
+                                <span class="text-sm uppercase tracking-widest text-primary/60 mb-1">Bàn số</span>
+                                <span class="font-serif text-5xl font-bold text-primary">05</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-primary/80 dark:text-primary/70">
+                            <div class="flex items-center justify-center gap-2">
+                                <span class="material-icons text-sm">groups</span>
+                                <span class="font-sans font-medium">Khu vực: Bạn bè chú rể</span>
+                            </div>
+                            <p class="text-sm italic">
+                                "Cảm ơn bạn đã đến chung vui cùng chúng tôi!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <div class="fixed bottom-0 left-0 w-full z-50 bg-[#f2ede9] border-t border-primary/20 shadow-lg md:hidden">
+        <nav
+            class="fixed bottom-0 left-0 w-full bg-[#f2ede9] border-t border-[#DCC8BC] z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden">
+            <ul class="flex justify-around items-center h-16 px-2">
+                <li class="flex-1">
+                    <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-2xl mb-0.5">home</span>
+                        <span class="text-[10px] font-medium font-body uppercase tracking-wider">Wedding</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-2xl mb-0.5">table_restaurant</span>
+                        <span class="text-[10px] font-medium font-body uppercase tracking-wider">Tìm bàn</span>
+                    </a>
+                </li>
+                <li class="flex-1">
+                    <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-2xl mb-0.5">list_alt</span>
+                        <span class="text-[10px] font-medium font-body uppercase tracking-wider">Thông tin</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div
+        class="fixed bottom-0 left-0 w-full z-50 bg-[#f2ede9] border-t border-primary/20 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] hidden md:block">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid grid-cols-4 h-20">
+                <a class="flex flex-row items-center justify-center h-full gap-3 text-[#af897c] hover:bg-black/5 transition-colors group"
+                    href="#">
+                    <span
+                        class="material-icons text-2xl group-hover:-translate-y-1 transition-transform duration-300">favorite</span>
+                    <span class="text-sm font-semibold font-sans tracking-wide">Wedding</span>
+                </a>
+                <a class="flex flex-row items-center justify-center h-full gap-3 text-[#af897c] bg-white/50 relative group"
+                    href="#">
+                    <span
+                        class="material-icons text-2xl group-hover:-translate-y-1 transition-transform duration-300">search</span>
+                    <span class="text-sm font-bold font-sans tracking-wide">Tìm bàn</span>
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-[#af897c]"></span>
+                </a>
+                <a class="flex flex-row items-center justify-center h-full gap-3 text-[#af897c] hover:bg-black/5 transition-colors group"
+                    href="#">
+                    <span
+                        class="material-icons text-2xl group-hover:-translate-y-1 transition-transform duration-300">info</span>
+                    <span class="text-sm font-semibold font-sans tracking-wide">Thông tin</span>
+                </a>
+                <a class="flex flex-row items-center justify-center h-full gap-3 text-[#af897c] hover:bg-black/5 transition-colors group"
+                    href="#">
+                    <span
+                        class="material-icons text-2xl group-hover:-translate-y-1 transition-transform duration-300">photo_camera</span>
+                    <span class="text-sm font-semibold font-sans tracking-wide">Khoảnh khắc</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

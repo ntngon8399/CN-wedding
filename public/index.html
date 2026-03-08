@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#8B5E4F" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Khanh Nhi & Duc Cuong Wedding - Wedding Invitation Website"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#af897c",
+              secondary: "#d9c5bd",
+              "background-light": "#f2ede9",
+              "background-dark": "#1a1614",
+              "card-light": "#ffffff",
+              "card-dark": "#2c2522",
+              "text-light": "#8a6b60",
+              "text-dark": "#8a6b60",
+            },
+            fontFamily: {
+              display: ["Montserrat", "serif"],
+              script: ["Great Vibes", "cursive"],
+              body: ["Montserrat", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+            backgroundImage: {
+              'paper-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+              'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')",
+            }
+          },
+        },
+        plugins: [],
+      };
+    </script>
+    
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,7 +71,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Khanh Nhi & Duc Cuong Wedding</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
