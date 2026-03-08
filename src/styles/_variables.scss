@@ -1,0 +1,79 @@
+// Color Palette
+$primary-color: #af897c;
+$primary-dark: #8a6b60;
+$secondary-color: #d9c5bd;
+$accent-color: #f5576c;
+
+// Background Colors
+$bg-light: #f2ede9;
+$bg-dark: #1a1614;
+$paper-light: #ffffff;
+$paper-dark: #3d3936;
+
+// Text Colors
+$text-light: #8a6b60;
+$text-dark: #333;
+$text-muted: #666;
+$text-white: #fff;
+
+// Gradient Backgrounds
+$gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+$gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+$gradient-warm: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+$gradient-cool: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+$gradient-wedding: linear-gradient(135deg, #f2ede9 0%, #e8dfd8 100%);
+
+// Typography
+$font-display: 'Great Vibes', cursive;
+$font-serif: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+$font-script: 'Great Vibes', cursive;
+
+// Font Sizes
+$font-xs: 0.9rem;
+$font-sm: 1rem;
+$font-md: 1.1rem;
+$font-lg: 1.3rem;
+$font-xl: 1.5rem;
+$font-xxl: 1.8rem;
+$font-hero: 2rem;
+$font-title: 2.5rem;
+$font-jumbo: 3rem;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 20px;
+$spacing-xl: 25px;
+$spacing-xxl: 30px;
+$spacing-huge: 40px;
+$spacing-massive: 60px;
+
+// Border Radius
+$radius-sm: 5px;
+$radius-md: 10px;
+$radius-lg: 15px;
+$radius-xl: 20px;
+$radius-full: 50px;
+
+// Shadows
+$shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+// Transitions
+$transition-fast: 0.3s ease;
+$transition-normal: 0.6s ease;
+
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+// Container Widths
+$container-sm: 300px;
+$container-md: 600px;
+$container-lg: 800px;
+$container-xl: 1000px;

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Wedding Home Screen</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&amp;family=Great+Vibes&amp;family=Montserrat:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#8B5E4F",
+            "background-light": "#F2EDE9",
+            "background-dark": "#1F1C18",
+            "card-light": "#FFFFFF",
+            "card-dark": "#2C2520",
+            "text-light": "#5D4037",
+            "text-dark": "#E0C9B6",
+            "accent": "#C4A484",
+          },
+          fontFamily: {
+            display: ["Montserrat", "serif"],
+            script: ["Great Vibes", "cursive"],
+            body: ["Montserrat", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+          backgroundImage: {
+            'paper-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+            'dark-texture': "url('https://www.transparenttextures.com/patterns/dark-matter.png')",
+          }
+        },
+      },
+    };
+  </script>
+  <style>
+    .ornament-flip-x {
+      transform: scaleX(-1);
+    }
+
+    .ornament-flip-y {
+      transform: scaleY(-1);
+    }
+
+    .ornament-flip-xy {
+      transform: scale(-1, -1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C4A484;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8B5E4F;
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark min-h-screen flex flex-col items-center justify-center relative transition-colors duration-300 pb-20 md:pb-0">
+  <div
+    class="fixed inset-0 pointer-events-none opacity-40 mix-blend-multiply dark:mix-blend-overlay z-0 bg-paper-texture dark:bg-dark-texture">
+  </div>
+  <main
+    class="relative z-10 w-full max-w-lg md:max-w-2xl bg-white/40 dark:bg-black/20 backdrop-blur-sm shadow-xl dark:shadow-black/50 md:my-10 md:rounded-2xl border border-[#DCC8BC] dark:border-[#3E3028] overflow-hidden min-h-screen md:min-h-[90vh]">
+    <div
+      class="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60">
+      <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+        <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
+          stroke="currentColor" stroke-width="1.5"></path>
+        <path d="M5,5 L15,5 L15,15 L5,15 Z" fill="currentColor" opacity="0.3"></path>
+        <circle cx="25" cy="25" fill="currentColor" r="2"></circle>
+        <path d="M90,10 C80,20 60,10 50,30 C40,50 30,20 10,90" fill="none" stroke="currentColor" stroke-dasharray="2,2"
+          stroke-width="1"></path>
+        <path d="M0,0 C30,0 50,20 60,60 C40,40 20,40 0,60 Z" fill="currentColor" opacity="0.1"></path>
+        <path d="M0,0 C0,30 20,50 60,60 C40,40 40,20 60,0 Z" fill="currentColor" opacity="0.1"></path>
+      </svg>
+    </div>
+    <div
+      class="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-x">
+      <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+        <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
+          stroke="currentColor" stroke-width="1.5"></path>
+        <path d="M5,5 L15,5 L15,15 L5,15 Z" fill="currentColor" opacity="0.3"></path>
+        <circle cx="25" cy="25" fill="currentColor" r="2"></circle>
+        <path d="M90,10 C80,20 60,10 50,30 C40,50 30,20 10,90" fill="none" stroke="currentColor" stroke-dasharray="2,2"
+          stroke-width="1"></path>
+        <path d="M0,0 C30,0 50,20 60,60 C40,40 20,40 0,60 Z" fill="currentColor" opacity="0.1"></path>
+        <path d="M0,0 C0,30 20,50 60,60 C40,40 40,20 60,0 Z" fill="currentColor" opacity="0.1"></path>
+      </svg>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-y">
+      <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+        <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
+          stroke="currentColor" stroke-width="1.5"></path>
+        <path d="M5,5 L15,5 L15,15 L5,15 Z" fill="currentColor" opacity="0.3"></path>
+        <circle cx="25" cy="25" fill="currentColor" r="2"></circle>
+        <path d="M90,10 C80,20 60,10 50,30 C40,50 30,20 10,90" fill="none" stroke="currentColor" stroke-dasharray="2,2"
+          stroke-width="1"></path>
+        <path d="M0,0 C30,0 50,20 60,60 C40,40 20,40 0,60 Z" fill="currentColor" opacity="0.1"></path>
+        <path d="M0,0 C0,30 20,50 60,60 C40,40 40,20 60,0 Z" fill="currentColor" opacity="0.1"></path>
+      </svg>
+    </div>
+    <div
+      class="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-xy">
+      <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+        <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
+          stroke="currentColor" stroke-width="1.5"></path>
+        <path d="M5,5 L15,5 L15,15 L5,15 Z" fill="currentColor" opacity="0.3"></path>
+        <circle cx="25" cy="25" fill="currentColor" r="2"></circle>
+        <path d="M90,10 C80,20 60,10 50,30 C40,50 30,20 10,90" fill="none" stroke="currentColor" stroke-dasharray="2,2"
+          stroke-width="1"></path>
+        <path d="M0,0 C30,0 50,20 60,60 C40,40 20,40 0,60 Z" fill="currentColor" opacity="0.1"></path>
+        <path d="M0,0 C0,30 20,50 60,60 C40,40 40,20 60,0 Z" fill="currentColor" opacity="0.1"></path>
+      </svg>
+    </div>
+    <div
+      class="absolute inset-4 md:inset-6 border border-[#DCC8BC] dark:border-[#5D4037] pointer-events-none opacity-50">
+    </div>
+    <div
+      class="relative z-10 px-6 py-12 md:px-12 md:py-16 flex flex-col items-center justify-between min-h-full h-full">
+      <div class="text-center w-full space-y-6">
+        <div class="flex justify-center mb-2">
+          <span class="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60"></span>
+        </div>
+        <h2 class="font-script text-3xl md:text-5xl text-accent dark:text-[#C4A484] tracking-wide transform -rotate-2">
+          Wedding Invitation</h2>
+        <h1 class="font-display text-2xl md:text-4xl text-primary font-bold mt-4 tracking-wider uppercase leading-snug">
+          Khanh Nhi <span class="mx-2 text-xl align-middle text-accent">&amp;</span> Duc Cuong
+        </h1>
+        <p class="font-serif text-sm md:text-base text-gray-600 dark:text-gray-300 italic mt-4 max-w-xs mx-auto">
+          Chúng tôi rất vui mừng khi được mời bạn tham gia vào lễ cưới của chúng tôi
+        </p>
+      </div>
+      <div class="my-8 md:my-10 relative">
+        <div
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-accent/10 dark:bg-accent/5 rounded-full blur-2xl z-0">
+        </div>
+        <img alt="Illustration of bride and groom walking away holding hands"
+          class="w-48 h-auto md:w-56 relative z-10 mix-blend-multiply dark:mix-blend-normal dark:opacity-90 rounded-full border-4 border-white/50 dark:border-white/10 shadow-lg"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuASwmyEIveow5R_hmWM3YoQb9xLsXcnnAB9QfREhlnpaXoa2nWtvsdbbz7Sg26rpVvdAIxNLSX1Ns6e8G47IGtacKAJzAhHv6tj5gsaQOs__v_J1nzLOjXUtLBIHdquGi69ydaCC-7C7t1M0J1dUUJlxY2-_-jM21-0x6gXD7S7BgYcGtFuAKeyZS6dXMjYz7YJL1I1irZhEDofYgxbA_fAfJaP6r_t8MV6lm7Kj5bmEWU6_No0vTArzeOcGvqvSo5OhyoJkAYGpwnh"
+          style="mask-image: radial-gradient(circle, black 60%, transparent 100%); -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);" />
+      </div>
+      <div class="text-center w-full space-y-8">
+        <div class="space-y-2">
+          <h3
+            class="font-display text-xl text-primary font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">
+            Thời gian</h3>
+          <div class="font-script text-2xl md:text-3xl text-gray-700 dark:text-[#D7C0AE] mt-2">
+            15 <span class="mx-1 text-sm font-sans text-accent">/</span> 03 <span
+              class="mx-1 text-sm font-sans text-accent">/</span> 2026
+          </div>
+          <div class="text-lg font-serif italic text-gray-500 dark:text-gray-400">
+            VOW diễn ra lúc 17:15
+          </div>
+          <div class="text-lg font-serif italic text-gray-500 dark:text-gray-400">
+            Tiệc cưới diễn ra lúc 18:00
+          </div>
+        </div>
+        <div class="flex items-center justify-center space-x-2 text-accent/50 dark:text-accent/30">
+          <span class="h-px w-12 bg-current"></span>
+          <span class="material-icons-outlined text-sm">favorite</span>
+          <span class="h-px w-12 bg-current"></span>
+        </div>
+        <div class="space-y-2">
+          <h3
+            class="font-display text-xl text-primary font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">
+            Địa điểm</h3>
+          <div class="font-serif text-lg text-gray-700 dark:text-[#D7C0AE]">
+            Hidden Heaven
+          </div>
+          <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-1">
+            393/21 Bình Quới, Phường 28, Bình Thạnh
+          </p>
+        </div>
+        <div
+          class="pt-6 flex justify-center gap-12 md:gap-24 text-center border-t border-primary/10 dark:border-primary/20 mt-4">
+          <div class="flex flex-col items-center group cursor-pointer">
+            <div
+              class="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary dark:text-[#C4A484]">
+              <span class="material-icons-outlined text-xl">map</span>
+            </div>
+            <span
+              class="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Chỉ
+              đường</span>
+          </div>
+          <div class="flex flex-col items-center group cursor-pointer">
+            <div
+              class="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary dark:text-[#C4A484]">
+              <span class="material-icons-outlined text-xl">check_circle</span>
+            </div>
+            <span
+              class="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Xác
+              nhận tham dự</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <span class="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60">spa</span>
+      </div>
+    </div>
+  </main>
+  <button
+    class="fixed bottom-24 right-6 z-50 bg-primary dark:bg-[#C4A484] text-white dark:text-background-dark p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 focus:outline-none ring-2 ring-offset-2 ring-primary dark:ring-offset-background-dark hidden md:block">
+    <span class="material-icons-outlined animate-spin-slow">music_note</span>
+  </button>
+  <nav
+    class="fixed bottom-0 left-0 w-full bg-[#f2ede9] border-t border-[#DCC8BC] z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] md:hidden">
+    <ul class="flex justify-around items-center h-16 px-2">
+      <li class="flex-1">
+        <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined text-2xl mb-0.5">home</span>
+          <span class="text-[10px] font-medium font-body uppercase tracking-wider">Wedding</span>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined text-2xl mb-0.5">table_restaurant</span>
+          <span class="text-[10px] font-medium font-body uppercase tracking-wider">Tìm bàn</span>
+        </a>
+      </li>
+      <li class="flex-1">
+        <a class="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+          href="#">
+          <span class="material-symbols-outlined text-2xl mb-0.5">list_alt</span>
+          <span class="text-[10px] font-medium font-body uppercase tracking-wider">Thông tin</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</body>
+
+</html>

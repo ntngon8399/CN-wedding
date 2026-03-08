@@ -1,0 +1,82 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Custom Tailwind Config */
+@layer base {
+  /* Font Families */
+  .font-display {
+    font-family: 'Montserrat', serif;
+  }
+  
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Custom Colors */
+  .bg-background-light {
+    background-color: #F2EDE9;
+  }
+  
+  .bg-background-dark {
+    background-color: #1F1C18;
+  }
+  
+  .bg-card-light {
+    background-color: #ffffff;
+  }
+  
+  .bg-card-dark {
+    background-color: #3d3936;
+  }
+  
+  .text-text-light {
+    color: #5D4037;
+  }
+  
+  .text-text-dark {
+    color: #E0C9B6;
+  }
+  
+  .text-primary {
+    color: #8B5E4F;
+  }
+  
+  .border-primary {
+    border-color: #8B5E4F;
+  }
+  
+  .placeholder-primary {
+    &::placeholder {
+      color: rgba(139, 94, 79, 0.4);
+    }
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #8B5E4F;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5D4037;
+  }
+}

@@ -1,0 +1,101 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Custom Tailwind Config */
+@layer base {
+  /* Font Families */
+  .font-display {
+    font-family: 'Montserrat', serif;
+  }
+  
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  /* Custom Colors */
+  .bg-background-light {
+    background-color: #F2EDE9;
+  }
+  
+  .bg-background-dark {
+    background-color: #1F1C18;
+  }
+  
+  .bg-paper-texture {
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  }
+  
+  .bg-dark-texture {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  }
+  
+  .text-text-light {
+    color: #5D4037;
+  }
+  
+  .text-text-dark {
+    color: #E0C9B6;
+  }
+  
+  .text-primary {
+    color: #8B5E4F;
+  }
+  
+  .text-accent {
+    color: #C4A484;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .ornament-flip-x {
+    transform: scaleX(-1);
+  }
+  
+  .ornament-flip-y {
+    transform: scaleY(-1);
+  }
+  
+  .ornament-flip-xy {
+    transform: scale(-1, -1);
+  }
+  
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C4A484;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8B5E4F;
+  }
+}
