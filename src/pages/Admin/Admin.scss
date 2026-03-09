@@ -3,7 +3,11 @@
   /* Import MUI Roboto font */
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   
-  /* Override MUI default colors to match wedding theme */
+  /* Force white background */
+  background-color: #ffffff !important;
+  min-height: 100vh;
+  
+  /* Override MUI default colors */
   .MuiAppBar-root {
     background-color: #af897c !important;
     color: white !important;
@@ -36,27 +40,33 @@
       background-color: #9a766a !important;
     }
   }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .admin-screen {
-    .MuiPaper-root {
-      background-color: #2c2522 !important;
-      color: #e0c9b6 !important;
-    }
-    
-    .MuiTableCell-head {
-      background-color: #1f1c18 !important;
-      color: #e0c9b6 !important;
-    }
-    
-    .MuiInputBase-root {
-      color: #e0c9b6 !important;
-    }
-    
-    .MuiInputLabel-root {
-      color: #e0c9b6 !important;
-    }
+  
+  /* Force white background for all containers */
+  .MuiContainer-root {
+    background-color: #ffffff !important;
+  }
+  
+  /* Force white background for cards */
+  .bg-card-light,
+  .bg-card-dark {
+    background-color: #ffffff !important;
+  }
+  
+  /* Force text colors */
+  .MuiTypography-root,
+  .MuiTableCell-root {
+    color: #333333 !important;
+  }
+  
+  .MuiInputBase-root {
+    color: #333333 !important;
+  }
+  
+  .MuiInputLabel-root {
+    color: #666666 !important;
+  }
+  
+  .MuiTextField-root {
+    background-color: #ffffff !important;
   }
 }
