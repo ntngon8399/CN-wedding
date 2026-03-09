@@ -79,7 +79,7 @@ const Home: React.FC = () => {
           {/* Header Section */}
           <div className="text-center w-full space-y-6 animate-fade-in">
             <div className="flex justify-center mb-2">
-              <span className="material-icons-outlined text-accent dark:text-primary-dark text-2xl opacity-60">favorite</span>
+              <span className="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60"></span>
             </div>
             <h2 className="font-script text-3xl md:text-5xl text-accent dark:text-[#C4A484] tracking-wide transform -rotate-2">Wedding Invitation</h2>
             <h1 className="font-display text-2xl md:text-4xl text-primary-dark font-bold mt-4 tracking-wider uppercase leading-snug">
@@ -134,9 +134,7 @@ const Home: React.FC = () => {
                 393/21 Bình Quới, Phường 28, Bình Thạnh
               </p>
             </div>
-          </div>
-
-          {/* Action Buttons */}
+            {/* Action Buttons */}
           <div className="pt-6 flex justify-center gap-12 md:gap-24 text-center border-t border-primary/10 dark:border-primary/20 mt-4 animate-fade-in delay-300">
             <div className="flex flex-col items-center group cursor-pointer" onClick={openWeddingMap('https://maps.app.goo.gl/LG8RWcHCBSP9nAoF6')}>
               <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary-dark dark:text-[#C4A484]">
@@ -151,11 +149,11 @@ const Home: React.FC = () => {
               <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Xác nhận tham dự</span>
             </div>
           </div>
-        </div>
-
-        {/* Footer Icon */}
-        <div className="flex justify-center mt-8 animate-fade-in delay-400">
-          <span className="material-icons-outlined text-accent dark:text-primary-dark text-2xl opacity-60">spa</span>
+          </div>  
+          {/* Footer Icon */}
+          <div className="flex justify-center mt-8 animate-fade-in delay-400">
+            <span className="material-icons-outlined text-accent dark:text-primary-dark text-2xl opacity-60">spa</span>
+          </div>
         </div>
       </main>
 
