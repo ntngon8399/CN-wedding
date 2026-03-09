@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Timeline.scss';
 
 const Timeline: React.FC = () => {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<string>('/timeline');
 
   const handleNavigation = (path: string) => {
+    setActiveTab(path);
     navigate(path);
   };
   const timelineEvents = [
@@ -40,7 +42,7 @@ const Timeline: React.FC = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 min-h-screen relative overflow-x-hidden pb-20">
+    <div className="timeline-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 min-h-screen relative overflow-x-hidden pb-20">
       <div className="fixed inset-0 pointer-events-none opacity-40 mix-blend-multiply dark:mix-blend-overlay z-0 bg-paper-texture dark:bg-dark-texture"></div>
       
       <div className="container mx-auto px-4 py-12 max-w-lg relative z-10">
@@ -94,8 +96,11 @@ const Timeline: React.FC = () => {
           <li className="flex-1">
             <button 
               onClick={() => handleNavigation('/')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}
               <span className="material-symbols-outlined text-2xl mb-0.5">home</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Wedding</span>
             </button>
@@ -103,8 +108,11 @@ const Timeline: React.FC = () => {
           <li className="flex-1">
             <button 
               onClick={() => handleNavigation('/find-table')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/find-table' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/find-table' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}
               <span className="material-symbols-outlined text-2xl mb-0.5">table_restaurant</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Tìm bàn</span>
             </button>
@@ -112,8 +120,11 @@ const Timeline: React.FC = () => {
           <li className="flex-1">
             <button 
               onClick={() => handleNavigation('/timeline')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/timeline' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/timeline' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}
               <span className="material-symbols-outlined text-2xl mb-0.5">list_alt</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Thông tin</span>
             </button>

@@ -1,11 +1,11 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
-/* Custom Tailwind Config */
-@layer base {
-  /* Font Families */
+/* FindTable Screen Container */
+.findtable-screen {
+  /* Font Families - matching find-table.html */
   .font-display {
-    font-family: 'Montserrat', serif;
+    font-family: 'Great Vibes', cursive;
   }
   
   .font-script {
@@ -17,7 +17,7 @@
   }
   
   .font-serif {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', serif;
   }
 
   /* Custom Colors */
@@ -30,38 +30,73 @@
   }
   
   .bg-card-light {
-    background-color: #ffffff;
+    background-color: #FFFFFF;
   }
   
   .bg-card-dark {
-    background-color: #3d3936;
-  }
-  
-  .text-text-light {
-    color: #5D4037;
-  }
-  
-  .text-text-dark {
-    color: #E0C9B6;
+    background-color: #2C2522;
   }
   
   .text-primary {
-    color: #8B5E4F;
+    color: #af897c;
   }
   
   .border-primary {
-    border-color: #8B5E4F;
+    border-color: #DCC8BC;
   }
   
-  .placeholder-primary {
-    &::placeholder {
-      color: rgba(139, 94, 79, 0.4);
-    }
+  .bg-paper-texture {
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  }
+  
+  .bg-dark-texture {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+  }
+  
+  .text-text-light {
+    color: #8a6b60;
+  }
+  
+  .text-text-dark {
+    color: #8a6b60;
   }
 }
 
 /* Custom Utilities */
 @layer utilities {
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animation delays */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
