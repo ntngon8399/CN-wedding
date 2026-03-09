@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FindTable.scss';
 import db from '../../firebase';
+import { collection, onSnapshot } from "firebase/firestore";
 
 interface Guest {
   id: string;
@@ -10,7 +11,7 @@ interface Guest {
 }
 
 const FindTable: React.FC = () => {
-  const [guests, setGuests] = React.useState<Guest[]>([]);
+  const [guests, setGuests] = React.useState<Guest[]|any>([]);
 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [hasSearched, setHasSearched] = useState<boolean>(false);
@@ -20,19 +21,20 @@ const FindTable: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    db.collection('guest_list').onSnapshot(
-      (snapshot: any) => {
-        const guestsData = snapshot.docs.map((doc: any) => ({
-          id: doc.id,
-          ...doc.data()
-        }));
-        setGuests(guestsData);
-      },
-      (error: any) => {
-        console.log('error', error);
-      },
-    );
-  }, []);
+  const q = collection(db, "guest_list");
+
+  const unsubscribe = onSnapshot(q, (snapshot) => {
+    const guestsData = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+
+    setGuests(guestsData||[]);
+  });
+
+  return () => unsubscribe();
+}, []);
+
 
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,7 +46,7 @@ const FindTable: React.FC = () => {
     setHasSearched(true);
     
     // Search for all matching users in guests array
-    const matches = guests.filter(guest => 
+    const matches = guests.filter((guest :any)=> 
       guest.name.toLowerCase().includes(searchQuery.toLowerCase().trim())
     );
     
@@ -324,7 +326,3 @@ const FindTable: React.FC = () => {
 };
 
 export default FindTable;
-function setGuests(arg0: any[]) {
-  throw new Error('Function not implemented.');
-}
-
