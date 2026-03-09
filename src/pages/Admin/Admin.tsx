@@ -30,7 +30,7 @@ import {
   Save as SaveIcon,
   Cancel as CancelIcon,
 } from '@mui/icons-material';
-import { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
 import db from '../../firebase';
 import './Admin.scss';
 
@@ -43,7 +43,6 @@ interface Guest {
 const Admin: React.FC = () => {
   const [guests, setGuests] = useState<Guest[]>([]);
   const [filteredGuests, setFilteredGuests] = useState<Guest[]>([]);
-  const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [openDialog, setOpenDialog] = useState(false);
   const [editingGuest, setEditingGuest] = useState<Guest | null>(null);
@@ -75,7 +74,6 @@ const Admin: React.FC = () => {
       }));
       setGuests(guestsData as Guest[]);
       setFilteredGuests(guestsData as Guest[]);
-      setLoading(false);
     });
 
     return () => unsubscribe();
