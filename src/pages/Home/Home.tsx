@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.scss';
 
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState<string>('/');
 
   const handleNavigation = (path: string) => {
+    setActiveTab(path);
     navigate(path);
   };
 
@@ -168,8 +170,11 @@ const Home: React.FC = () => {
           <li className="flex-1">
             <button
               onClick={() => handleNavigation('/')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}  
               <span className="material-symbols-outlined text-2xl mb-0.5">home</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Wedding</span>
             </button>
@@ -177,8 +182,11 @@ const Home: React.FC = () => {
           <li className="flex-1">
             <button
               onClick={() => handleNavigation('/find-table')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/find-table' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/find-table' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}  
               <span className="material-symbols-outlined text-2xl mb-0.5">table_restaurant</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Tìm bàn</span>
             </button>
@@ -186,8 +194,11 @@ const Home: React.FC = () => {
           <li className="flex-1">
             <button
               onClick={() => handleNavigation('/timeline')}
-              className="flex flex-col items-center justify-center h-full w-full text-[#af897c] hover:bg-black/5 transition-colors"
+              className={`flex flex-col items-center justify-center h-full w-full hover:bg-black/5 transition-colors relative ${
+                activeTab === '/timeline' ? 'text-primary bg-white/30' : 'text-[#af897c]'
+              }`}
             >
+              {activeTab === '/timeline' && <span className="absolute top-0 left-0 w-full h-0.5 bg-[#af897c]"></span>}  
               <span className="material-symbols-outlined text-2xl mb-0.5">list_alt</span>
               <span className="text-[10px] font-medium font-body uppercase tracking-wider">Thông tin</span>
             </button>
