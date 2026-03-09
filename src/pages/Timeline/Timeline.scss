@@ -1,23 +1,26 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
 
-/* Custom Tailwind Config */
-@layer base {
-  /* Font Families */
-  .font-display {
-    font-family: 'Montserrat', serif;
+/* Timeline Screen Container */
+.timeline-screen {
+  /* Base font for all text */
+  font-family: 'Montserrat', sans-serif !important;
+  
+  /* Font Families - matching timeline.html */
+  .font-sans {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', serif !important;
   }
   
   .font-script {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes', cursive !important;
   }
   
   .font-body {
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .font-serif {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif !important;
   }
 
   /* Custom Colors */
