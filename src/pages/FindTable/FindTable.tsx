@@ -79,7 +79,7 @@ const FindTable: React.FC = () => {
   };
 
   return (
-    <div className="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark min-h-screen relative overflow-x-hidden pb-24">
+    <div className="findtable-screen bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark min-h-screen relative overflow-x-hidden pb-24">
 
       {/* Decorative ornaments */}
       <div className="fixed top-0 left-0 w-32 h-32 md:w-48 md:h-48 z-0 pointer-events-none opacity-40 dark:opacity-20 text-primary">
@@ -165,9 +165,10 @@ const FindTable: React.FC = () => {
               Tìm
             </button>
           </div>
+          <p className="text-center text-xs mt-3 text-primary/60 dark:text-primary/50 italic">
+            *Vui lòng nhập đầy đủ họ và tên
+          </p>
         </div>
-
-        <p className="text-center text-xs text-primary/60 dark:text-primary/40 italic mb-8 animate-fade-in delay-200">*Vui lòng nhập đầy đủ họ và tên</p>
 
         {/* Dropdown for multiple matches */}
         {showDropdown && matchedUsers.length > 0 && (
@@ -189,9 +190,9 @@ const FindTable: React.FC = () => {
                       <p className="font-medium text-primary dark:text-primary group-hover:text-primary/80">
                         {user.name}
                       </p>
-                      <p className="text-sm text-primary/60 dark:text-primary/40">
-                        Bàn số: {user.table}
-                      </p>
+                      <p className="text-center text-xs mt-3 text-primary/60 dark:text-primary/50 italic">
+              *Vui lòng nhập đầy đủ họ và tên
+            </p>
                     </div>
                     <span className="material-icons text-primary/40 group-hover:text-primary/60">
                       arrow_forward_ios
@@ -211,22 +212,24 @@ const FindTable: React.FC = () => {
             <div className="order-2 md:order-1">
               <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/10 overflow-hidden">
                 <div className="p-6 md:p-8">
-                  <h3 className="font-serif text-xl md:text-2xl text-primary text-center mb-6">Sơ đồ tiệc cưới</h3>
-                  <div className="relative aspect-square bg-background-light dark:bg-background-dark rounded-lg border border-primary/30 p-4">
-                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/3 h-12 bg-primary/20 rounded-t-lg border-t border-l border-r border-primary"></div>
-                    <div className="grid grid-cols-4 gap-4 mt-16 h-[calc(100%-5rem)]">
+                  <h3 className="font-serif text-center text-xl text-primary mb-6">Sơ đồ tiệc cưới</h3>
+                  <div className="relative aspect-square bg-background-light dark:bg-background-dark rounded-lg border border-primary/10 p-4">
+                    <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/3 h-12 bg-primary/20 dark:bg-primary/30 rounded-t-lg border-t border-l border-r border-primary flex items-center justify-center">
+                      <span className="text-xs font-bold uppercase tracking-widest text-primary">Stage</span>
+                    </div>
+                    <div className="grid grid-cols-4 grid-rows-4 gap-4 mt-16 h-full pb-8">
                       {[...Array(12)].map((_, i) => (
                         <div
                           key={i}
-                          className={`border border-primary/30 rounded-full flex items-center justify-center text-xs transition-all relative ${
+                          className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
                             i + 1 === foundUser.table 
-                              ? 'bg-primary text-white cursor-pointer hover:scale-110' 
-                              : 'text-primary/50 cursor-not-allowed'
+                              ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 flex items-center justify-center font-bold scale-110 z-10 animate-pulse' 
+                              : 'text-primary/50'
                           }`}
                         >
                           {String(i + 1).padStart(2, '0')}
                           {i + 1 === foundUser.table && (
-                            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow-md whitespace-nowrap">
+                            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
                               You are here
                             </div>
                           )}
@@ -241,36 +244,28 @@ const FindTable: React.FC = () => {
             {/* User Info */}
             <div className="order-1 md:order-2">
               <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/20 overflow-hidden relative">
-                <div className="absolute top-0 right-0 w-32 h-32 opacity-10 text-primary">
-                  <svg className="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
-                    <path d="M10,10 Q50,10 50,50 T90,90 M10,30 Q30,30 30,50 M10,50 Q20,50 20,60" fill="none"
-                      stroke="currentColor" strokeWidth="1.5"></path>
-                    <path d="M5,5 L15,5 L15,15 L5,15 Z" fill="currentColor" opacity="0.3"></path>
-                    <circle cx="25" cy="25" fill="currentColor" r="2"></circle>
-                    <path d="M90,10 C80,20 60,10 50,30 C40,50 30,20 10,90" fill="none" stroke="currentColor" strokeDasharray="2,2"
-                      strokeWidth="1"></path>
-                    <path d="M0,0 C30,0 50,20 60,60 C40,40 20,40 0,60 Z" fill="currentColor" opacity="0.1"></path>
-                    <path d="M0,0 C0,30 20,50 60,60 C40,40 40,20 60,0 Z" fill="currentColor" opacity="0.1"></path>
+                <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
+                  <svg className="w-full h-full text-primary" fill="currentColor" viewBox="0 0 100 100">
+                    <path d="M50 0 C50 0 70 30 100 30 C70 30 70 60 50 100 C30 60 30 30 0 30 C30 30 50 0 50 0 Z">
+                    </path>
                   </svg>
                 </div>
 
                 <div className="relative z-10 p-8 md:p-12 text-center">
-                  <p className="font-script text-4xl md:text-5xl text-primary/60 dark:text-primary/40 mb-2">Welcome</p>
-                  <h2 className="font-display text-2xl md:text-3xl font-bold text-primary mb-6">{foundUser.name}</h2>
+                  <p className="font-display text-3xl text-primary/60 mb-2">Welcome</p>
+                  <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6">{foundUser.name}</h2>
 
-                  <div className="mb-6">
+                  <div className="my-6">
                     <div className="inline-flex flex-col items-center justify-center w-32 h-32 rounded-full border-4 border-double border-primary/30 bg-background-light dark:bg-background-dark">
                       <span className="text-xs uppercase tracking-wider text-primary/60 dark:text-primary/40 mb-1">Bàn số</span>
-                      <span className="font-display text-5xl font-bold text-primary">{foundUser.table}</span>
+                      <span className="font-serif text-5xl font-bold text-primary">{String(foundUser.table).padStart(2, '0')}</span>
                     </div>
                   </div>
 
-                  <div className="space-y-4 text-primary/80 dark:text-primary/60">
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="material-icons text-lg">groups</span>
-                      <span className="font-sans font-medium text-base">Khu vực: Bạn bè chú rể</span>
-                    </div>
-                    <p className="font-sans italic text-base">"Cảm ơn bạn đã đến chung vui cùng chúng tôi!"</p>
+                  <div className="space-y-4 text-primary/80 dark:text-primary/70">
+                    <p className="text-sm italic">
+                      "Cảm ơn bạn đã đến chung vui cùng chúng tôi!"
+                    </p>
                   </div>
                 </div>
               </div>

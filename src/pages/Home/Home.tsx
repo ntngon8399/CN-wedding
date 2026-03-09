@@ -16,7 +16,7 @@ const Home: React.FC = () => {
     window.open(url, '_blank');
   };
   return (
-    <div className="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark min-h-screen flex flex-col items-center justify-center relative transition-colors duration-300 pb-20 md:pb-0">
+    <div className="home-screen bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark min-h-screen flex flex-col items-center justify-center relative transition-colors duration-300 pb-20 md:pb-0">
       <div className="fixed inset-0 pointer-events-none opacity-40 mix-blend-multiply dark:mix-blend-overlay z-0 bg-paper-texture dark:bg-dark-texture"></div>
 
       <main className="relative z-10 w-full max-w-lg md:max-w-2xl bg-white/40 dark:bg-black/20 backdrop-blur-sm shadow-xl dark:shadow-black/50 md:my-10 md:rounded-2xl border border-[#DCC8BC] dark:border-[#3E3028] overflow-hidden min-h-screen md:min-h-[90vh]">

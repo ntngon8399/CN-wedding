@@ -42,7 +42,7 @@ const Timeline: React.FC = () => {
   ];
 
   return (
-    <div className="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 min-h-screen relative overflow-x-hidden pb-20">
+    <div className="timeline-screen bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300 min-h-screen relative overflow-x-hidden pb-20">
       <div className="fixed inset-0 pointer-events-none opacity-40 mix-blend-multiply dark:mix-blend-overlay z-0 bg-paper-texture dark:bg-dark-texture"></div>
       
       <div className="container mx-auto px-4 py-12 max-w-lg relative z-10">
