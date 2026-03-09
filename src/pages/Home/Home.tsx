@@ -20,7 +20,7 @@ const Home: React.FC = () => {
       <main className="relative z-10 w-full max-w-lg md:max-w-2xl bg-white/40 dark:bg-black/20 backdrop-blur-sm shadow-xl dark:shadow-black/50 md:my-10 md:rounded-2xl border border-[#DCC8BC] dark:border-[#3E3028] overflow-hidden min-h-screen md:min-h-[90vh]">
 
         {/* Decorative ornaments */}
-        <div className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60">
+        <div className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary-dark/40 dark:text-primary-dark/60">
           <svg className="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
             <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
               stroke="currentColor" strokeWidth="1.5"></path>
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           </svg>
         </div>
 
-        <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-x">
+        <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary-dark/40 dark:text-primary-dark/60 ornament-flip-x">
           <svg className="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
             <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
               stroke="currentColor" strokeWidth="1.5"></path>
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
           </svg>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-y">
+        <div className="absolute bottom-0 left-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary-dark/40 dark:text-primary-dark/60 ornament-flip-y">
           <svg className="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
             <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
               stroke="currentColor" strokeWidth="1.5"></path>
@@ -59,7 +59,7 @@ const Home: React.FC = () => {
           </svg>
         </div>
 
-        <div className="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary/40 dark:text-primary/60 ornament-flip-xy">
+        <div className="absolute bottom-0 right-0 w-24 h-24 md:w-32 md:h-32 opacity-80 pointer-events-none text-primary-dark/40 dark:text-primary-dark/60 ornament-flip-xy">
           <svg className="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
             <path d="M10,10 Q40,10 50,30 T90,50 M10,10 Q10,40 30,50 T50,90 M20,20 Q40,20 50,40" fill="none"
               stroke="currentColor" strokeWidth="1.5"></path>
@@ -77,12 +77,12 @@ const Home: React.FC = () => {
         <div className="relative z-10 px-6 py-12 md:px-12 md:py-16 flex flex-col items-center justify-between min-h-full h-full">
 
           {/* Header Section */}
-          <div className="text-center w-full space-y-6">
+          <div className="text-center w-full space-y-6 animate-fade-in">
             <div className="flex justify-center mb-2">
-              <span className="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60">favorite</span>
+              <span className="material-icons-outlined text-accent dark:text-primary-dark text-2xl opacity-60">favorite</span>
             </div>
             <h2 className="font-script text-3xl md:text-5xl text-accent dark:text-[#C4A484] tracking-wide transform -rotate-2">Wedding Invitation</h2>
-            <h1 className="font-display text-2xl md:text-4xl text-primary font-bold mt-4 tracking-wider uppercase leading-snug">
+            <h1 className="font-display text-2xl md:text-4xl text-primary-dark font-bold mt-4 tracking-wider uppercase leading-snug">
               Khanh Nhi <span className="mx-2 text-xl align-middle text-accent">&amp;</span> Duc Cuong
             </h1>
             <p className="font-serif text-sm md:text-base text-gray-600 dark:text-gray-300 italic mt-4 max-w-xs mx-auto">
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
           </div>
 
           {/* Image Section */}
-          <div className="my-8 md:my-10 relative">
+          <div className="my-8 md:my-10 relative animate-fade-in delay-100">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-accent/10 dark:bg-accent/5 rounded-full blur-2xl z-0"></div>
             <img
               alt="Illustration of bride and groom walking away holding hands"
@@ -102,10 +102,10 @@ const Home: React.FC = () => {
           </div>
 
           {/* Details Section */}
-          <div className="text-center w-full space-y-8">
+          <div className="text-center w-full space-y-8 animate-fade-in delay-200">
             {/* Time Details */}
             <div className="space-y-2">
-              <h3 className="font-display text-xl text-primary font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Thời gian</h3>
+              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Thời gian</h3>
               <div className="font-script text-2xl md:text-3xl text-gray-700 dark:text-[#D7C0AE] mt-2">
                 15 <span className="mx-1 text-sm font-sans text-accent">/</span> 03 <span className="mx-1 text-sm font-sans text-accent">/</span> 2026
               </div>
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
 
             {/* Location Details */}
             <div className="space-y-2">
-              <h3 className="font-display text-xl text-primary font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Địa điểm</h3>
+              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Địa điểm</h3>
               <div className="font-serif text-lg text-gray-700 dark:text-[#D7C0AE]">
                 Hidden Heaven
               </div>
@@ -137,15 +137,15 @@ const Home: React.FC = () => {
           </div>
 
           {/* Action Buttons */}
-          <div className="pt-6 flex justify-center gap-12 md:gap-24 text-center border-t border-primary/10 dark:border-primary/20 mt-4">
+          <div className="pt-6 flex justify-center gap-12 md:gap-24 text-center border-t border-primary/10 dark:border-primary/20 mt-4 animate-fade-in delay-300">
             <div className="flex flex-col items-center group cursor-pointer" onClick={openWeddingMap('https://maps.app.goo.gl/LG8RWcHCBSP9nAoF6')}>
-              <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary dark:text-[#C4A484]">
+              <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary-dark dark:text-[#C4A484]">
                 <span className="material-icons-outlined text-xl">map</span>
               </div>
               <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Chỉ đường</span>
             </div>
             <div className="flex flex-col items-center group cursor-pointer" onClick={openWeddingMap('https://forms.gle/Ce3usWsDS3f3L5nX6')}>
-              <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary dark:text-[#C4A484]">
+              <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary-dark dark:text-[#C4A484]">
                 <span className="material-icons-outlined text-xl">check_circle</span>
               </div>
               <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Xác nhận tham dự</span>
@@ -154,8 +154,8 @@ const Home: React.FC = () => {
         </div>
 
         {/* Footer Icon */}
-        <div className="flex justify-center mt-8">
-          <span className="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60">spa</span>
+        <div className="flex justify-center mt-8 animate-fade-in delay-400">
+          <span className="material-icons-outlined text-accent dark:text-primary-dark text-2xl opacity-60">spa</span>
         </div>
       </main>
 

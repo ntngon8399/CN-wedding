@@ -131,7 +131,7 @@ const FindTable: React.FC = () => {
       <main className="relative z-10 container mx-auto px-4 py-8 md:py-12 max-w-5xl flex flex-col items-center min-h-[80vh]">
 
         {/* Header */}
-        <div className="text-center mb-12 space-y-4">
+        <div className="text-center mb-12 space-y-4 animate-fade-in">
           <h1 className="font-display text-5xl md:text-7xl text-primary dark:text-primary mb-2">Find Your Table</h1>
           <div className="h-px w-24 bg-primary mx-auto opacity-50"></div>
           <p className="font-sans text-primary/80 dark:text-primary/70 text-sm md:text-base tracking-wide uppercase">
@@ -140,7 +140,7 @@ const FindTable: React.FC = () => {
         </div>
 
         {/* Search Section */}
-        <div className="w-full max-w-md mx-auto mb-12 relative group">
+        <div className="w-full max-w-md mx-auto mb-12 relative group animate-fade-in delay-100">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-primary/40 to-primary/20 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative bg-card-light dark:bg-card-dark rounded-xl shadow-lg border border-primary/20 p-2 flex items-center">
             <span className="material-icons text-primary/50 ml-3">search</span>
@@ -165,11 +165,11 @@ const FindTable: React.FC = () => {
           </div>
         </div>
 
-        <p className="text-center text-xs text-primary/60 dark:text-primary/40 italic mb-8">*Vui lòng nhập đầy đủ họ và tên</p>
+        <p className="text-center text-xs text-primary/60 dark:text-primary/40 italic mb-8 animate-fade-in delay-200">*Vui lòng nhập đầy đủ họ và tên</p>
 
         {/* Dropdown for multiple matches */}
         {showDropdown && matchedUsers.length > 0 && (
-          <div className="w-full max-w-md mx-auto mb-8">
+          <div className="w-full max-w-md mx-auto mb-8 animate-fade-in delay-300">
             <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/20 overflow-hidden">
               <div className="p-4 border-b border-primary/10">
                 <p className="text-sm text-primary/60 dark:text-primary/40 text-center">
@@ -203,7 +203,7 @@ const FindTable: React.FC = () => {
 
         {/* Main Content Grid */}
         {hasSearched && foundUser && (
-          <div className="w-full grid md:grid-cols-2 gap-8 items-start">
+          <div className="w-full grid md:grid-cols-2 gap-8 items-start animate-fade-in delay-400">
 
             {/* Wedding Map */}
             <div className="order-2 md:order-1">
@@ -278,7 +278,7 @@ const FindTable: React.FC = () => {
 
         {/* Show message when user not found */}
         {hasSearched && !foundUser && !showDropdown && (
-          <div className="w-full max-w-md mx-auto text-center">
+          <div className="w-full max-w-md mx-auto text-center animate-fade-in">
             <div className="bg-card-light dark:bg-card-dark rounded-xl shadow-xl border border-primary/20 p-8">
               <span className="material-icons text-4xl text-primary/40 mb-4">search_off</span>
               <p className="text-primary/60 dark:text-primary/40 text-lg">
