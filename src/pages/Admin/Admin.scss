@@ -1,0 +1,62 @@
+/* Admin Screen Styles */
+.admin-screen {
+  /* Import MUI Roboto font */
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  
+  /* Override MUI default colors to match wedding theme */
+  .MuiAppBar-root {
+    background-color: #af897c !important;
+    color: white !important;
+  }
+  
+  .MuiPaper-root {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(175, 137, 124, 0.1) !important;
+  }
+  
+  .MuiTableCell-head {
+    background-color: #f8f5f2 !important;
+    color: #8a6b60 !important;
+    font-weight: 600 !important;
+  }
+  
+  .MuiButton-contained {
+    background-color: #af897c !important;
+    color: white !important;
+    
+    &:hover {
+      background-color: #9a766a !important;
+    }
+  }
+  
+  .MuiFab-primary {
+    background-color: #af897c !important;
+    
+    &:hover {
+      background-color: #9a766a !important;
+    }
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .admin-screen {
+    .MuiPaper-root {
+      background-color: #2c2522 !important;
+      color: #e0c9b6 !important;
+    }
+    
+    .MuiTableCell-head {
+      background-color: #1f1c18 !important;
+      color: #e0c9b6 !important;
+    }
+    
+    .MuiInputBase-root {
+      color: #e0c9b6 !important;
+    }
+    
+    .MuiInputLabel-root {
+      color: #e0c9b6 !important;
+    }
+  }
+}
