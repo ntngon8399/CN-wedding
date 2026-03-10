@@ -166,7 +166,7 @@ const FindTable: React.FC = () => {
             </button>
           </div>
           <p className="text-center text-xs mt-3 text-primary/60 dark:text-primary/50 italic">
-            *Vui lòng nhập đầy đủ họ và tên
+            *Vui lòng nhập tên để tìm bàn của bạn
           </p>
         </div>
 
@@ -190,9 +190,6 @@ const FindTable: React.FC = () => {
                       <p className="font-medium text-primary dark:text-primary group-hover:text-primary/80">
                         {user.name}
                       </p>
-                      <p className="text-center text-xs mt-3 text-primary/60 dark:text-primary/50 italic">
-              *Vui lòng nhập đầy đủ họ và tên
-            </p>
                     </div>
                     <span className="material-icons text-primary/40 group-hover:text-primary/60">
                       arrow_forward_ios
