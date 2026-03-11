@@ -84,10 +84,10 @@ const Home: React.FC = () => {
               <span className="material-icons-outlined text-accent dark:text-primary text-2xl opacity-60"></span>
             </div>
             <h2 className="font-script text-3xl md:text-5xl text-accent dark:text-[#C4A484] tracking-wide transform -rotate-2">Wedding Invitation</h2>
-            <h1 className="font-display text-2xl md:text-4xl text-primary-dark font-bold mt-4 tracking-wider uppercase leading-snug">
-              Khanh Nhi <span className="mx-2 text-xl align-middle text-accent">&amp;</span> Duc Cuong
+            <h1 className="font-display text-2xl md:text-4xl text-primary-dark mt-4 tracking-wider uppercase leading-snug italic" style={{fontWeight: 700}}>
+              <span className="whitespace-nowrap">Khánh Nhi</span> <br className="max-[400px]:block hidden" /><span className="mx-1 text-xl align-middle">&amp;</span> <br className="max-[400px]:block hidden" /> <span className="whitespace-nowrap">Đức Cường</span>
             </h1>
-            <p className="font-serif text-sm md:text-base text-gray-600 dark:text-gray-300 italic mt-4 max-w-xs mx-auto">
+            <p className="font-serif text-sm md:text-base italic mt-4 max-w-xs mx-auto" style={{color: '#C4A484'}}>
               Chúng tôi rất vui mừng khi được mời bạn tham gia vào lễ cưới của chúng tôi
             </p>
           </div>
@@ -107,14 +107,14 @@ const Home: React.FC = () => {
           <div className="text-center w-full space-y-8 animate-fade-in delay-200">
             {/* Time Details */}
             <div className="space-y-2">
-              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Thời gian</h3>
-              <div className="font-script text-2xl md:text-3xl text-gray-700 dark:text-[#D7C0AE] mt-2">
-                15 <span className="mx-1 text-sm font-sans text-accent">/</span> 03 <span className="mx-1 text-sm font-sans text-accent">/</span> 2026
+              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">TIME</h3>
+              <div className="text-2xl md:text-3xl mt-2 font-display italic" style={{color: '#C4A484'}}>
+                15 <span className="mx-1 text-sm font-display" style={{color: '#C4A484'}}>/</span> 03 <span className="mx-1 text-sm font-display" style={{color: '#C4A484'}}>/</span> 2026
               </div>
-              <div className="text-lg font-serif italic text-gray-500 dark:text-gray-400">
+              <div className="text-lg font-display italic" style={{color: '#C4A484'}}>
                 VOW diễn ra lúc 17:15
               </div>
-              <div className="text-lg font-serif italic text-gray-500 dark:text-gray-400">
+              <div className="text-lg font-display italic" style={{color: '#C4A484'}}>
                 Tiệc cưới diễn ra lúc 18:00
               </div>
             </div>
@@ -128,11 +128,11 @@ const Home: React.FC = () => {
 
             {/* Location Details */}
             <div className="space-y-2">
-              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">Địa điểm</h3>
-              <div className="font-serif text-lg text-gray-700 dark:text-[#D7C0AE]">
+              <h3 className="font-display text-xl text-primary-dark font-semibold tracking-widest uppercase border-b border-primary/20 pb-1 inline-block px-4">LOCATION</h3>
+              <div className="text-lg font-display" style={{color: '#C4A484'}}>
                 Hidden Heaven
               </div>
-              <p className="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 mt-1">
+              <p className="text-xs uppercase tracking-widest mt-1 font-display" style={{color: '#C4A484'}}>
                 393/21 Bình Quới, Phường 28, Bình Thạnh
               </p>
             </div>
@@ -142,13 +142,13 @@ const Home: React.FC = () => {
               <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary-dark dark:text-[#C4A484]">
                 <span className="material-icons-outlined text-xl">map</span>
               </div>
-              <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Chỉ đường</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium font-display" style={{color: '#C4A484'}}>Chỉ đường</span>
             </div>
             <div className="flex flex-col items-center group cursor-pointer" onClick={openWeddingMap('https://forms.gle/Ce3usWsDS3f3L5nX6')}>
               <div className="w-12 h-12 rounded-full bg-[#f8f5f2] dark:bg-[#3E3028] flex items-center justify-center shadow-sm mb-2 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary-dark dark:text-[#C4A484]">
                 <span className="material-icons-outlined text-xl">check_circle</span>
               </div>
-              <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium text-gray-600 dark:text-gray-400">Xác nhận tham dự</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-wide font-medium font-display" style={{color: '#C4A484'}}>Xác nhận tham dự</span>
             </div>
           </div>
           </div>  
