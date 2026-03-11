@@ -214,24 +214,134 @@ const FindTable: React.FC = () => {
                     <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-1/3 h-12 bg-primary/20 dark:bg-primary/30 rounded-t-lg border-t border-l border-r border-primary flex items-center justify-center">
                       <span className="text-xs font-bold uppercase tracking-widest text-primary">Stage</span>
                     </div>
-                    <div className="grid grid-cols-4 grid-rows-4 gap-4 mt-16 h-full pb-8">
-                      {[...Array(12)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
-                            i + 1 === foundUser.table 
-                              ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 flex items-center justify-center font-bold scale-110 z-10 animate-pulse' 
-                              : 'text-primary/50'
-                          }`}
-                        >
-                          {String(i + 1).padStart(2, '0')}
-                          {i + 1 === foundUser.table && (
-                            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
-                              You are here
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                    <div className="grid grid-cols-4 gap-4 mt-16 h-full pb-8 relative">
+                      {/* Row 1: 1, 2, 3, 4 */}
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        1 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(1).padStart(2, '0')}
+                        {1 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        2 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(2).padStart(2, '0')}
+                        {2 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        3 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(3).padStart(2, '0')}
+                        {3 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        4 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(4).padStart(2, '0')}
+                        {4 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Row 2: 8 and 5 with space-around */}
+                      <div></div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative -translate-x-10 ${
+                        8 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(8).padStart(2, '0')}
+                        {8 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative translate-x-10 ${
+                        5 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(5).padStart(2, '0')}
+                        {5 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div></div>
+                      
+                      {/* Row 3: 10, 9, 7, 6 */}
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        10 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(10).padStart(2, '0')}
+                        {10 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        9 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(9).padStart(2, '0')}
+                        {9 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        7 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(7).padStart(2, '0')}
+                        {7 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
+                      <div className={`rounded-full border border-primary/30 flex items-center justify-center text-xs transition-all relative ${
+                        6 === foundUser.table 
+                          ? 'bg-primary text-white dark:text-white shadow-lg shadow-primary/40 font-bold scale-110 z-10 animate-pulse' 
+                          : 'text-primary/50'
+                      }`}>
+                        {String(6).padStart(2, '0')}
+                        {6 === foundUser.table && (
+                          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap bg-card-light dark:bg-card-dark text-primary text-xs px-2 py-1 rounded shadow border border-primary/20">
+                            You are here
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
