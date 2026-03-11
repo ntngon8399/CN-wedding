@@ -85,7 +85,7 @@ const Home: React.FC = () => {
             </div>
             <h2 className="font-script text-3xl md:text-5xl text-accent dark:text-[#C4A484] tracking-wide transform -rotate-2">Wedding Invitation</h2>
             <h1 className="font-display text-2xl md:text-4xl text-primary-dark mt-4 tracking-wider uppercase leading-snug italic" style={{fontWeight: 700}}>
-              Khánh Nhi &amp; Đức Cường
+              <span className="whitespace-nowrap">Khánh Nhi</span> <br className="max-[400px]:block hidden" /><span className="mx-1 text-xl align-middle">&amp;</span> <br className="max-[400px]:block hidden" /> <span className="whitespace-nowrap">Đức Cường</span>
             </h1>
             <p className="font-serif text-sm md:text-base italic mt-4 max-w-xs mx-auto" style={{color: '#C4A484'}}>
               Chúng tôi rất vui mừng khi được mời bạn tham gia vào lễ cưới của chúng tôi
